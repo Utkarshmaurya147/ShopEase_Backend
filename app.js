@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(cors({
-  origin: "http://localhost:3001", // Your Frontend
+  origin: "https://shopease-e-commerce-1.onrender.com", // Your Frontend
   credentials: true                // Allows cookies to be sent back and forth
 }));
 
