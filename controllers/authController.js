@@ -93,8 +93,8 @@ const login = async (req, res) => {
     res.cookie("shopease_token", token, {
       httpOnly: true,       // Prevents JS access
       // secure: process.env.NODE_ENV === "production", // Only over HTTPS in prod
-      secure: false,
-      sameSite: "lax",   // Prevents CSRF attacks
+      secure: true,
+      sameSite: none,   // allow cross-site cookies
       maxAge: 24 * 60 * 60 * 1000, // 1 day
       path: "/"
     });
