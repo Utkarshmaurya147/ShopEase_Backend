@@ -12,7 +12,7 @@ const getAllCategories = async (req, res) => {
         }
         return res.status(200).json({success: true, message: "All Categories", categories});
     } catch (error) {
-        console.log("Error in Fetching Categories");
+        console.log("Error in Fetching Categories", error);
         return res.status(500).json({success: false, message: "Internal Server Error", error: error.message});
     }
 }
